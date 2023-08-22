@@ -2094,6 +2094,7 @@
 #include "code\modules\fallout\equipment\headsets.dm"
 #include "code\modules\fallout\equipment\stealthboy.dm"
 #include "code\modules\fallout\machinery\alchemy_table.dm"
+#include "code\modules\fallout\machinery\brass_smeltery.dm"
 #include "code\modules\fallout\machinery\chalkboard.dm"
 #include "code\modules\fallout\machinery\lathes.dm"
 #include "code\modules\fallout\machinery\radio_management.dm"
