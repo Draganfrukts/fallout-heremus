@@ -1,18 +1,21 @@
-#define LOG_BURN_TIMER 15 SECONDS
-#define MAXIMUM_BURN_TIMER 10 MINUTES
+#define LOG_SMELT_TIMER 15 SECONDS
+#define MAXIMUM_SMELTERY_TIMER 10 MINUTES
 #define TIME_PER_BRASS 10 SECONDS
 
 /obj/machinery/brass_smeltery
 	name = "brass smeltery"
 	desc = "An advanced piece of machinery that produces brass alloy."
-	icon = 'icons/obj/waterpurifier.dmi'
-	icon_state = "purifier"
+	icon = 'icons/fallout/machines/64x32.dmi'
+	icon_state = "smeltery_off"
 
+	bound_width = 64
 	flags_1 = NODECONSTRUCT_1
 	move_resist = INFINITY
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	use_power = NO_POWER_USE
 	density = TRUE
+	layer = BELOW_OBJ_LAYER
+	anchored = TRUE
 
 	/// Whether the smeltery is currently burning fuel
 	var/activated = FALSE
@@ -28,14 +31,14 @@
 /obj/machinery/brass_smeltery/attackby(obj/item/T, mob/user)
 	if(istype(T, /obj/item/stack/sheet/mineral/wood))
 		var/obj/item/stack/sheet/mineral/wood/wood = T
-		var/space_remaining = MAXIMUM_BURN_TIMER - burn_time_remaining()
-		var/space_for_logs = round(space_remaining / LOG_BURN_TIMER)
+		var/space_remaining = MAXIMUM_SMELTERY_TIMER - burn_time_remaining()
+		var/space_for_logs = round(space_remaining / LOG_SMELT_TIMER)
 		if(space_for_logs < 1)
 			to_chat(user, "<span class='warning'>You can't fit any more of [T] in [src]!</span>")
 			return
 		var/logs_used = min(space_for_logs, wood.amount)
 		wood.use(logs_used)
-		adjust_fuel_timer(LOG_BURN_TIMER * logs_used)
+		adjust_fuel_timer(LOG_SMELT_TIMER * logs_used)
 		user.visible_message("<span class='notice'>[user] tosses some \
 			wood into [src].</span>", "<span class='notice'>You add \
 			some fuel to [src].</span>")
@@ -76,10 +79,10 @@
 /obj/machinery/brass_smeltery/proc/adjust_fuel_timer(amount)
 	if(activated)
 		flame_expiry_timer += amount
-		if(burn_time_remaining() < MAXIMUM_BURN_TIMER)
-			flame_expiry_timer = world.time + MAXIMUM_BURN_TIMER
+		if(burn_time_remaining() < MAXIMUM_SMELTERY_TIMER)
+			flame_expiry_timer = world.time + MAXIMUM_SMELTERY_TIMER
 	else
-		fuel_added = clamp(fuel_added + amount, 0, MAXIMUM_BURN_TIMER)
+		fuel_added = clamp(fuel_added + amount, 0, MAXIMUM_SMELTERY_TIMER)
 
 /obj/machinery/brass_smeltery/proc/burn_time_remaining()
 	if(activated)
@@ -92,11 +95,13 @@
 	flame_expiry_timer = world.time + fuel_added
 	brass_production_timer = world.time + TIME_PER_BRASS
 	fuel_added = 0
+	icon_state = "smeltery_on"
 	update_icon()
 	adjust_light()
 
 /obj/machinery/brass_smeltery/proc/put_out()
 	activated = FALSE
+	icon_state = "smeltery_off"
 	update_icon()
 	adjust_light()
 
