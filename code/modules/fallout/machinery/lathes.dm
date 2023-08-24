@@ -102,6 +102,7 @@
 					)
 	allowed_materials = list(
 		/datum/material/iron,
+		/datum/material/brass,
 		/datum/material/titanium,
 		/datum/material/blackpowder,
 		/datum/material/uranium)
@@ -145,7 +146,8 @@
 		else
 			to_chat(user, span_warning("There aren't any casings in \the [O] to recycle!"))
 		return
-	if(panel_open)
+
+	if(!busy && !stat && istype(O, /obj/item/book/granter/crafting_recipe))
 		if(!simple && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_one))
 			to_chat(user, "<span class='notice'>You upgrade [src] with simple ammunition schematics.</span>")
 			simple = TRUE
@@ -156,12 +158,12 @@
 			basic = TRUE
 			qdel(O)
 			return
-		else if(!intermediate && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_three))
+		if(!intermediate && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_three))
 			to_chat(user, "<span class='notice'>You upgrade [src] with intermediate ammunition schematics.</span>")
 			intermediate = TRUE
 			qdel(O)
 			return
-		else if(!advanced && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_four))
+		if(!advanced && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_four))
 			to_chat(user, "<span class='notice'>You upgrade [src] with advanced ammunition schematics.</span>")
 			advanced = TRUE
 			qdel(O)

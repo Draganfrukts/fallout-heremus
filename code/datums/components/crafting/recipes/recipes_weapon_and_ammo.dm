@@ -188,7 +188,7 @@
 /datum/crafting_recipe/shotgunammo
 	name = "12g handloaded ammo bag"
 	result = /obj/item/ammo_box/shotgun/improvised
-	reqs = list(/obj/item/stack/sheet/metal = 5,
+	reqs = list(/obj/item/stack/sheet/brass = 5,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_MSRELOADER)
@@ -201,7 +201,7 @@
 	result = /obj/item/ammo_box/shotgun/trainshot
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 	/obj/item/stack/sheet/prewar = 2,
-	/obj/item/stack/sheet/metal = 1,
+	/obj/item/stack/sheet/brass = 1,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_AWORKBENCH)
@@ -215,7 +215,7 @@
 	result = /obj/item/ammo_box/shotgun/flechette
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 	/obj/item/stack/sheet/prewar = 50,//Yes, really.
-	/obj/item/stack/sheet/metal = 1,
+	/obj/item/stack/sheet/brass = 1,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_AWORKBENCH)
@@ -229,7 +229,7 @@
 	result = /obj/item/ammo_box/shotgun/magnum
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
 	/obj/item/stack/sheet/prewar = 30,
-	/obj/item/stack/sheet/metal = 2,
+	/obj/item/stack/sheet/brass = 2,
 	/obj/item/stack/ore/blackpowder = 2
 	)
 	tools = list(TOOL_AWORKBENCH)
@@ -243,7 +243,7 @@
 	result = /obj/item/ammo_box/clip/shotgun/loaded/flechette
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 	/obj/item/stack/sheet/prewar = 25,//Not viable if you have the actual box recipe. Intended.
-	/obj/item/stack/sheet/metal = 1,
+	/obj/item/stack/sheet/brass = 1,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_AWORKBENCH)
@@ -256,7 +256,7 @@
 	result = /obj/item/ammo_box/clip/shotgun/loaded/magnum
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
 	/obj/item/stack/sheet/prewar = 15,//As above.
-	/obj/item/stack/sheet/metal = 2,
+	/obj/item/stack/sheet/brass = 2,
 	/obj/item/stack/ore/blackpowder = 2
 	)
 	tools = list(TOOL_AWORKBENCH)
@@ -268,7 +268,7 @@
 	name = ".22 Long Rifle ammo box"
 	result = /obj/item/ammo_box/m22
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
-	/obj/item/stack/sheet/metal = 1,
+	/obj/item/stack/sheet/brass = 1,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_MSRELOADER)
@@ -282,7 +282,7 @@
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 	/obj/item/stack/cable_coil = 5,
 	/obj/item/stack/crafting/electronicparts = 2,
-	/obj/item/stack/sheet/metal = 1,
+	/obj/item/stack/sheet/brass = 1,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_MSRELOADER)
@@ -293,7 +293,7 @@
 /datum/crafting_recipe/c9mm
 	name = "9mm handloaded ammo bag"
 	result = /obj/item/ammo_box/c9mm/improv
-	reqs = list(/obj/item/stack/sheet/metal = 5,
+	reqs = list(/obj/item/stack/sheet/brass = 5,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_MSRELOADER)
@@ -306,7 +306,7 @@
 	name = "9mm incendiary-tipped ammo box"
 	result = /obj/item/ammo_box/c9mm/incendiary
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
-	/obj/item/stack/sheet/metal = 5,
+	/obj/item/stack/sheet/brass = 5,
 	/datum/reagent/fuel = 20,
 	/obj/item/stack/ore/blackpowder = 1
 	)
@@ -321,7 +321,7 @@
 	name = ".38 incendiary-tipped ammo box"
 	result = /obj/item/ammo_box/c38box/incendiary
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
-	/obj/item/stack/sheet/metal = 5,
+	/obj/item/stack/sheet/brass = 5,
 	/datum/reagent/fuel = 20,
 	/obj/item/stack/ore/blackpowder = 1
 	)
@@ -333,7 +333,7 @@
 /datum/crafting_recipe/c38box
 	name = ".38 handloaded ammo bag"
 	result = /obj/item/ammo_box/c38box/improvised
-	reqs = list(/obj/item/stack/sheet/metal = 5,
+	reqs = list(/obj/item/stack/sheet/brass = 5,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_MSRELOADER)
@@ -345,7 +345,7 @@
 	name = "10mm incendiary-tipped ammo box"
 	result = /obj/item/ammo_box/c10mm/fire
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
-	/obj/item/stack/sheet/metal = 6,
+	/obj/item/stack/sheet/brass = 6,
 	/datum/reagent/fuel = 10,
 	/obj/item/stack/ore/blackpowder = 1
 	)
@@ -357,7 +357,7 @@
 /datum/crafting_recipe/c10mm
 	name = "10mm handloaded ammo bag"
 	result = /obj/item/ammo_box/c10mm/improvised
-	reqs = list(/obj/item/stack/sheet/metal = 5,
+	reqs = list(/obj/item/stack/sheet/brass = 5,
 	/datum/reagent/blackpowder = 25
 	)
 	tools = list(TOOL_MSRELOADER)
@@ -370,7 +370,7 @@
 	name = ".357 incendiary-tipped ammo box"
 	result = /obj/item/ammo_box/a357box/incendiary
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
-	/obj/item/stack/sheet/metal = 5,
+	/obj/item/stack/sheet/brass = 5,
 	/datum/reagent/fuel = 10,
 	/obj/item/stack/ore/blackpowder = 1
 	)
@@ -382,7 +382,7 @@
 /datum/crafting_recipe/a357boximprov
 	name = ".357 handloaded ammo bag"
 	result = /obj/item/ammo_box/a357box/improvised
-	reqs = list(/obj/item/stack/sheet/metal = 5,
+	reqs = list(/obj/item/stack/sheet/brass = 5,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_MSRELOADER)
@@ -394,7 +394,7 @@
 	name = ".44 incendiary-tipped ammo box"
 	result = /obj/item/ammo_box/m44box/incendiary
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
-	/obj/item/stack/sheet/metal = 5,
+	/obj/item/stack/sheet/brass = 5,
 	/datum/reagent/fuel = 10,
 	/obj/item/stack/ore/blackpowder = 1
 	)
@@ -406,7 +406,7 @@
 /datum/crafting_recipe/m44box
 	name = ".44 handloaded ammo bag"
 	result = /obj/item/ammo_box/m44box/improvised
-	reqs = list(/obj/item/stack/sheet/metal = 6,
+	reqs = list(/obj/item/stack/sheet/brass = 6,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_MSRELOADER)
@@ -418,7 +418,7 @@
 	name = ".45 ACP incendiary-tipped ammo box"
 	result = /obj/item/ammo_box/c45/incendiary
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
-	/obj/item/stack/sheet/metal = 5,
+	/obj/item/stack/sheet/brass = 5,
 	/datum/reagent/fuel = 10,
 	/obj/item/stack/ore/blackpowder = 1
 	)
@@ -430,7 +430,7 @@
 /datum/crafting_recipe/c45
 	name = ".45 ACP handloaded ammo bag"
 	result = /obj/item/ammo_box/c45/improvised
-	reqs = list(/obj/item/stack/sheet/metal = 6,
+	reqs = list(/obj/item/stack/sheet/brass = 6,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_MSRELOADER)
@@ -510,7 +510,7 @@
 /datum/crafting_recipe/a556
 	name = ".223  handloaded ammo bag"
 	result = /obj/item/ammo_box/a556/sport/improvised
-	reqs = list(/obj/item/stack/sheet/metal = 6,
+	reqs = list(/obj/item/stack/sheet/brass = 6,
 	/obj/item/stack/ore/blackpowder = 1
 	)
 	tools = list(TOOL_MSRELOADER)

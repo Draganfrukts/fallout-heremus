@@ -653,7 +653,7 @@ GLOBAL_LIST_INIT(runed_metal_recipes, list ( \
 	amount = 5
 
 /*
- * Brass
+ * Shitty Clockwork Brass (UNUSED)
  */
 GLOBAL_LIST_INIT(brass_recipes, list ( \
 	new/datum/stack_recipe("wall gear", /obj/structure/destructible/clockwork/wall_gear, 3, time = 10, one_per_turf = TRUE, on_floor = TRUE), \
@@ -722,6 +722,32 @@ GLOBAL_LIST_INIT(brass_recipes, list ( \
 /obj/item/stack/tile/brass/fifty
 	amount = 50
 	merge_type = /obj/item/stack/tile/brass
+
+/*
+ * F13 Brass
+ */
+
+/obj/item/stack/sheet/brass
+	name = "brass"
+	desc = "Sheets made out of brass. Useful for ammo production."
+	singular_name = "brass sheet"
+	icon_state = "sheet-brass"
+	item_state = "sheet-brass"
+	icon = 'icons/obj/stack_objects.dmi'
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	custom_materials = list(/datum/material/brass=MINERAL_MATERIAL_AMOUNT)
+	grind_results = list(/datum/reagent/iron = 5, /datum/reagent/copper = 3)
+	merge_type = /obj/item/stack/sheet/brass
+	material_type = /datum/material/brass
+
+/obj/item/stack/sheet/brass/ten
+	amount = 10
+
+/obj/item/stack/sheet/brass/thirty
+	amount = 30
+
+/obj/item/stack/sheet/brass/fifty
+	amount = 50
 
 /*
  * Bronze
